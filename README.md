@@ -108,8 +108,6 @@ We automated three empirical ablation sweeps to quantify sensitivity to optimiza
 | **Adam Only** (2,000 epochs) | 29.40% | $2.1276 \times 10^{-1}$ | 15.0s | Stalls before capturing the sharp gradient; high residual. |
 | **L-BFGS Only** (1,000 iter) | 11.03% | $9.3542 \times 10^{-2}$ | 5.1s | Converges faster than Adam, but sensitive to initial weights. |
 | **Staged Adam + L-BFGS** (Baseline) | **1.79%** | **$2.2956 \times 10^{-3}$** | 15.1s | **16x error reduction.** Adam finds the basin; L-BFGS resolves the shock. |
-
-
 <p align="center">
   <img src="figures/ablation_optimizer.png" alt="Optimization Strategy Comparison" width="600"/>
 </p>
