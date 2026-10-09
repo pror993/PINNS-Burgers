@@ -1,0 +1,8 @@
+{
+  "relative_l2_error": 0.017859084091325132,
+  "relative_l2_error_percent": 1.7859084091325133,
+  "max_absolute_error_linf": 0.21142419090942283,
+  "mean_absolute_error": 0.003067617695415495,
+  "in_domain_pde_residual": 0.0022983644157648087,
+  "extrapolation_pde_residual": 0.07591991871595383
+}

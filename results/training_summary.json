@@ -1,0 +1,11 @@
+{
+  "duration_sec": 16.052040338516235,
+  "model_parameters": 7851,
+  "final_loss": {
+    "total_loss": 0.0006511458777822554,
+    "loss_ic": 1.1254198852839181e-06,
+    "loss_bc": 8.679440952619188e-07,
+    "loss_pde": 0.0005861954414285719
+  },
+  "checkpoint": "checkpoints/burgers_pinn.pt"
+}

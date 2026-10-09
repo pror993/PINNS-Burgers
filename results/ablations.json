@@ -1,0 +1,118 @@
+{
+  "optimizer_sweep": [
+    {
+      "strategy": "Adam Only",
+      "wall_clock_sec": 15.047545909881592,
+      "total_loss": 0.21974153816699982,
+      "pde_loss": 0.2096075713634491,
+      "relative_l2_percent": 29.40313157442192,
+      "in_domain_pde": 0.21276305615901947,
+      "extrapolation_pde": 0.24289646744728088
+    },
+    {
+      "strategy": "L-BFGS Only",
+      "wall_clock_sec": 5.0619590282440186,
+      "total_loss": 0.08028025925159454,
+      "pde_loss": 0.07202769815921783,
+      "relative_l2_percent": 11.032828552555218,
+      "in_domain_pde": 0.09354233741760254,
+      "extrapolation_pde": 1.9659987688064575
+    },
+    {
+      "strategy": "Staged Adam + L-BFGS",
+      "wall_clock_sec": 15.08509087562561,
+      "total_loss": 0.0006511458777822554,
+      "pde_loss": 0.0005861954414285719,
+      "relative_l2_percent": 1.7859084091325133,
+      "in_domain_pde": 0.0022956179454922676,
+      "extrapolation_pde": 0.07591991871595383
+    }
+  ],
+  "loss_weights_sweep": [
+    {
+      "config": "Equal (1:1:1)",
+      "w_ic": 1.0,
+      "w_bc": 1.0,
+      "w_pde": 1.0,
+      "loss_ic": 0.0001265633327420801,
+      "loss_bc": 2.9977561553096166e-06,
+      "loss_pde": 0.00026854866882786155,
+      "relative_l2_percent": 4.85687283540581,
+      "in_domain_pde": 0.0024525525514036417
+    },
+    {
+      "config": "Physics-Heavy (1:1:10)",
+      "w_ic": 1.0,
+      "w_bc": 1.0,
+      "w_pde": 10.0,
+      "loss_ic": 0.014127111062407494,
+      "loss_bc": 1.638386856939178e-05,
+      "loss_pde": 0.0004023870569653809,
+      "relative_l2_percent": 34.26999852113685,
+      "in_domain_pde": 0.006887993309646845
+    },
+    {
+      "config": "Moderate IC/BC (10:10:1)",
+      "w_ic": 10.0,
+      "w_bc": 10.0,
+      "w_pde": 1.0,
+      "loss_ic": 1.2378910469124094e-05,
+      "loss_bc": 1.1174305427630316e-06,
+      "loss_pde": 0.0008476784569211304,
+      "relative_l2_percent": 6.073742944192381,
+      "in_domain_pde": 0.005498756188899279
+    },
+    {
+      "config": "Notebook Baseline (50:10:1)",
+      "w_ic": 50.0,
+      "w_bc": 10.0,
+      "w_pde": 1.0,
+      "loss_ic": 1.1254198852839181e-06,
+      "loss_bc": 8.679440952619188e-07,
+      "loss_pde": 0.0005861954414285719,
+      "relative_l2_percent": 1.7859084091325133,
+      "in_domain_pde": 0.0022956179454922676
+    },
+    {
+      "config": "IC-Heavy (100:10:1)",
+      "w_ic": 100.0,
+      "w_bc": 10.0,
+      "w_pde": 1.0,
+      "loss_ic": 1.1956335583818145e-06,
+      "loss_bc": 3.7562504076049663e-06,
+      "loss_pde": 0.0022193575277924538,
+      "relative_l2_percent": 6.02572022166449,
+      "in_domain_pde": 0.006715022958815098
+    }
+  ],
+  "collocation_sweep": [
+    {
+      "n_collocation": 500,
+      "wall_clock_sec": 5.160347938537598,
+      "relative_l2_percent": 5.628923877109098,
+      "in_domain_pde": 0.8443444967269897,
+      "extrapolation_pde": 2.3606350421905518
+    },
+    {
+      "n_collocation": 1000,
+      "wall_clock_sec": 11.384061813354492,
+      "relative_l2_percent": 21.454729692903797,
+      "in_domain_pde": 0.8823975920677185,
+      "extrapolation_pde": 0.380092054605484
+    },
+    {
+      "n_collocation": 2500,
+      "wall_clock_sec": 14.937469005584717,
+      "relative_l2_percent": 1.7859084091325133,
+      "in_domain_pde": 0.0022956179454922676,
+      "extrapolation_pde": 0.07591991871595383
+    },
+    {
+      "n_collocation": 5000,
+      "wall_clock_sec": 23.941200017929077,
+      "relative_l2_percent": 1.2359494867437981,
+      "in_domain_pde": 0.0010401266627013683,
+      "extrapolation_pde": 0.08044087886810303
+    }
+  ]
+}
